@@ -5,38 +5,40 @@
   colorlinks = true
 }
 \pagenumbering{roman}
-\topmargin=\item 0in
-\oddsidemargin=\item 0in
-\evensidemargin=\item 0in
-\textwidth=\item 5in
-\marginparwidth=\item 5in
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0.0in
+\textwidth=6.5in
+\marginparwidth=0.5in
 \headheight=0pt
 \headsep=0pt
-\textheight=\item 0in
+\textheight=9.0in
 \begin{document}
 
 \centerline{{\LARGE \bf Atos Mentor Matching}}
 
-\centerline{ \large \bf Biweekly Report \item  28\textsuperscript{th} of October 2016}
+\centerline{ \large \bf Biweekly Report 2, 28\textsuperscript{th} of October 2016}
 \centerline{ Christopher Lau $\bullet$ Harry Chen $\bullet$ Matthew Bell }
 \noindent
-\line(\item 0){470}\\
+\line(1,0){470}\\
 
 
 \noindent {\Large \bf Overview}
 \smallskip
 
 \noindent
-The last two weeks involved taking what was learned from meeting our client and forming a set of requirements. We also set up our development methodology and early designs of both the user interface and the system architecture.
+Over the last two weeks, we focused more on researching techniques and ideas to approach the app and come up with a feasible solution. Research was done on the match making algorithm to find the best possible way to pair mentors and mentees and discussions on which frameworks to use were also raised. A few of the frameworks mentioned were Ruby on Rails, AngularJS for front-end and NodeJs for backend.
+
+We arranged another meeting with our client, Jane. Jane had previously followed up with us after our first meeting, finalising the requirements for the app. She also sent us a few documents regarding the mentorship programs (i.e mentor user profile templates, mentor guidelines) which will help us understand more about the program and aid in further development. Also in her email, Jane gave us an example explaining the mentor/mentee matching process which gave us a better idea of how the process works.
 
 \bigskip
 \noindent{\Large \bf Meetings To Date}
 \smallskip
 
 \begin{description}
-  \item[Supervisor Meeting \item  24\textsuperscript{th} of October 2016] --- During the first meeting with our supervisor, we introduced each other and gave a quick brief of our project. She also gave some advice on how to manage the project and how to write the project outline.
-  \item[Team Meeting \item  26\textsuperscript{th} of October 2016] --- We discussed how to manage the project website; at first Harry built a website by using Bootstrap and Less. But later Matt suggested using Jekyll to build a static webise which is much easier to maintain. We also discussed the technology stack we going to use for the app and shared system designs.
-  \item[Client Meeting \item  27\textsuperscript{th} of October 2016] --- This was a quick web call to finalize requirements. The discussion was more focused on the process of matching mentors with mentees and also selected fields which were to be included in user profiles for the app. Our client and us also raised any outstanding confusion regarding the general structure of the app (eg. The different mentoring schemes should have different forms).
+  \item[Supervisor Meeting 1, 24\textsuperscript{th} of October 2016] --- During the first meeting with our supervisor, we introduced each other and gave a quick brief of our project. She also gave some advice on how to manage the project and how to write the project outline.
+  \item[Team Meeting 3, 26\textsuperscript{th} of October 2016] --- We discussed how to manage the project website; at first Harry built a website by using Bootstrap and Less. But later Matt suggested using Jekyll to build a static website which is much easier to maintain. We also discussed the technology stack we'll use for the app, and also shared possible system designs.
+  \item[Client Meeting 2, 27\textsuperscript{th} of October 2016] --- This was a quick Skype call to finalize requirements. The discussion was more focussed on the process of matching mentors with mentees and also the criteria that current mentees use when finding mentors. Finally, cleared some outstanding confusion regarding the general structure of the app (eg. the different constraints that different mentorship programs may have).
 \end{description}
 
 \bigskip
@@ -44,11 +46,11 @@ The last two weeks involved taking what was learned from meeting our client and 
 \smallskip
 
 \noindent
-Since the previous report these are the tasks that have been completed to date:
+Since the previous report, these are the tasks that have been completed:
 \begin{itemize}
     \item Create the website for our project (http://students.cs.ucl.ac.uk/2016/group19/)
     \item Research existing apps, e.g. Momo, Mentor Match
-    \item Initial sketches of user interface
+    \item Create initial sketches of user interface
     \item Formalise project requirements
     \item Arrange meeting with another client (Mike) for technical side requirements
     \item Create entity-relationship diagram
@@ -74,18 +76,18 @@ Figure out the first verison of team website(by Bootstrap) and continue working 
 \smallskip
 
 \noindent
-At the start of the fortnight, I formalised the requirements for the project and sent them off to the client. Then, I set up a basic static site using jekyll and have started adding content to it. The nature of the site means that we can very quickly add new content to it without having to touch any HTML code. Finally, I have been sketching some system architecture designs (e.g., user authentication API, entity-relation diagram), and have been researching the software stack that we should use.\\
+At the start of the fortnight, I formalised the requirements for the project and sent them off to the client; I also acquired a virtual server from our department and set it up for development. Then, I set up a basic static site using the Jekyll framework and have started adding content to it. The nature of the site means that we can very quickly add new content to it without having to touch any HTML code. Also, I have been sketching some system architecture designs (e.g., user authentication API, entity-relation diagram), and have been researching the software stack that we should use. Finally, I worked on a first possible matching algorithm that would suggest the three most suitable mentors to each mentee so that they can be ranked in order of preference. \\
 
 \bigskip
 \noindent{\Large \bf Problems To Resolve}
 \smallskip
 
 \noindent
-
-\begin{itemize}
-    \item Problems to be solved when making project website - e.g., acquiring project server from department.
-    \item Research the matching examples from client and make a framework.
-\end{itemize}
+We're not currently experiencing any problems.\\
+% \begin{itemize}
+%     \item Problems to be solved when making project website - e.g., acquiring project server from department.
+%     \item Research the matching examples from client and make a framework.
+% \end{itemize}
 
 \bigskip
 \noindent{\Large \bf Plan For The Next Two Weeks}
@@ -95,13 +97,17 @@ At the start of the fortnight, I formalised the requirements for the project and
 Over the next two weeks we will be focusing on the following activities:
 
 \begin{itemize}
- \item Take the mentor matching example from client
- \item Meet Mike (Chief Technology Officer) and get requirements from tech side
- \item Continue working on requirements and research.
- \item Existing / example code investigations should begin.
- \item Create project website for client, TAs and supervisor.
- \item Present Initial analysis of literature findings to client.
- \item with the research identifying strategies, ideas, tools, etc. Compare Software Engineering Methods
+  \item Complete documentation on website and add team bios
+  \item Develop an R\&D experiments logging tool as a web app
+  \item Add theme to website
+  \item Formalise architecture design and UI design
+  \item Create project outline and present to supervisor and client for approval
+  \item Create end user stories (mentor and mentee)
+  \item Present research findings to client
 \end{itemize}
+
+\noindent
+Our Kanban board can be accessed here:\\
+https://trello.com/invite/b/KLcBmb5x/e4a703f76d5b9ab02cae55afed153ffb/syseng
 
 \end{document}
