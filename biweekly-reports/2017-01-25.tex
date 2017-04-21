@@ -1,0 +1,135 @@
+% arara: xelatex: { synctex: true, action: nonstopmode, options: "-halt-on-error" }
+% arara: clean: { files: [ 2017-01-25.aux, 2017-01-25.bbl, 2017-01-25.bcf, 2017-01-25.blg, 2017-01-25.log, 2017-01-25.out, 2017-01-25.run.xml ]}
+\documentclass[11pt]{report}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true}
+\pagenumbering{roman}
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0.0in
+\textwidth=6.5in
+\marginparwidth=0.5in
+\headheight=0pt
+\headsep=0pt
+\textheight=9.0in
+\begin{document}
+
+\centerline{{\LARGE \bf Atos Mentor Matching}}
+
+\centerline{\large \bf Biweekly Report 5, 25\textsuperscript{th} of January 2017}
+\centerline{Christopher Lau $\bullet$ Harry Chen $\bullet$ Matthew Bell }
+\noindent
+\line(1,0){470}\\
+
+
+\noindent {\Large \bf Overview}
+\smallskip
+
+\noindent
+Over the last two weeks, the team spent most of the team setting up the
+development environment. The team also successfully exported the ionic creator
+prototype into an ionic project. However, the design is still subject to change
+and the user interface would continued to be improved over the course of
+development. Also, an UML diagram illustrating the database model was also
+created which would act as a reference for implementation of the actual database
+model, along with the initial API endpoints being designed and documented using
+the online Swagger framework. Finally, there was a short 2 minute elevator pitch
+at the 20th of January where the team presented its progress on the project so
+far and the future plans of development along with project deliverables.
+
+\bigskip
+\noindent{\Large \bf Meetings To Date}
+\smallskip
+
+\noindent
+\begin{itemize}
+    \item \textbf{Team Meeting 1 (2017/01/18)}: This was a short meeting to
+        complete the slides for the 2 minute elevator pitch. We summarised our
+        progress for term 1 and also completed an system architecture design
+        which is included in our elevator pitch. We also established
+        deliverables and goals for the end of term 2.
+    \item \textbf{Team Meeting 2 (2017/01/25)}: For this meeting, Matt was
+        working on completing the UML diagram for the database model while Harry
+        and Chris focused on exporting the ionic creator prototype into a ionic
+        project and hosting the project locally. We then set further milestones
+        for the next two weeks which were mainly to start implementing some of
+        the key features of the application.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Completed Tasks}
+\smallskip
+
+\noindent
+Since the previous report these are the tasks that have been completed to date:
+\begin{itemize}
+    \item Exported ionic creator prototype into a working ionic project. Every
+        team member is able to host prototype locally.
+    \item Completed UML diagram for database model which would act as a
+        reference for the actual implementation.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Chris' Progerss}
+\smallskip
+
+\noindent
+For this week, I was in charge of summarising the challenges that the team has
+faced so far and how we hope to overcome them to include in our elevator pitch.
+I have also established some deliverables for the project. Also, I will continue
+to learn and carry out research on the Ionic framework so that I can help Harry
+for the front-end development.
+
+\bigskip
+\noindent{\Large \bf Harry's Progress}
+\smallskip
+
+\noindent
+In last two weeks I took research of angularjs and Django, also took some
+research of database design. I exported our prototype design from ionic creator
+and imported it to ionic project then started coding on it. I am now working on
+solving routing problem, and connecting front end work with server side (data
+base).
+
+\bigskip
+\noindent{\Large \bf Matt's Progress}
+\smallskip
+
+\noindent
+My tasks have been focussed on creating as much useful reference material as
+possible to ensure that server development is as painless as it can be. I took
+our entity-relation diagram and created a full class diagram, complete with
+relations, private/public attributes, and class methods. I have also begun using
+this class diagram to design API endpoints using Swagger, an online tool that
+allows developers to write API documentation and generate code stubs from it.
+This means that when development will be simpler when it comes to writing the
+backend itself.
+
+\bigskip
+\noindent{\Large \bf Plan For The Next Two Weeks}
+\smallskip
+
+\noindent
+For the next two weeks, the team plans to start actual implementation of the
+features based on the key requirements of the application such as user
+authentication, and registration. We will also start implementing the database
+model and the API for the backend.
+
+\hrule
+
+\subsection*{Keeping Up With The Project}
+
+To complement these biweekly reports, you can also view these pages:\\
+
+\noindent
+Project site: http://students.cs.ucl.ac.uk/2016/group19/\\
+
+\noindent
+Code repository: https://github.com/mbellgb/syseng19-code\\
+
+\noindent
+Documentation: https://github.com/mbellgb/syseng19-docs
+
+\end{document}
+% vim: textwidth=80

@@ -1,0 +1,120 @@
+% arara: xelatex: { synctex: true, action: nonstopmode, options: "-halt-on-error" }
+% arara: clean: { files: [ 2017-02-27.aux, 2017-02-27.bbl, 2017-02-27.bcf, 2017-02-27.blg, 2017-02-27.log, 2017-02-27.out, 2017-02-27.run.xml ]}
+\documentclass[11pt]{report}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true}
+\pagenumbering{roman}
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0.0in
+\textwidth=6.5in
+\marginparwidth=0.5in
+\headheight=0pt
+\headsep=0pt
+\textheight=9.0in
+\begin{document}
+
+\centerline{{\LARGE \bf Atos Mentor Matching}}
+
+\centerline{\large \bf Biweekly Report 7, 27\textsuperscript{th} of February 2017}
+\centerline{Christopher Lau $\bullet$ Harry Chen $\bullet$ Matthew Bell }
+\noindent
+\line(1,0){470}\\
+
+
+\noindent {\Large \bf Overview}
+\smallskip
+
+\noindent
+Over the last two weeks, we have been working hard on both the web server and
+the webapp to meet our project targets by the end of this term. The server now
+successfully uses the OAuth2.0 protocol for user login, and the webapp is being
+programmed to use these login and signup services. We are also working towards
+setting up some mentorship-related API endpoints, such as the programme
+creation/deletion endpoints and the cohort signup endpoints.
+
+\bigskip
+\noindent{\Large \bf Meetings To Date}
+\smallskip
+
+\noindent
+We had no meetings this past fortnight since the first week was a reading week
+and the second week was a scenario week where we worked on a different project
+for the week.
+
+\bigskip
+\noindent{\Large \bf Completed Tasks}
+\smallskip
+
+\noindent
+Since the previous report these are the tasks that have been completed to date:
+\begin{itemize}
+    \item Data service for transporting form data across templates finished.
+    \item Add functionalities to all form pages.
+    \item Hosted web app on ionic view for testing on mobile platform.
+    \item Completed front-end templates for individual mentorship program description pages.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Chris' Progerss}
+\smallskip
+
+\noindent
+For the past two weeks, I continued working on designing front-end templates for
+the webapp and also added interactive features using AngularJS to improve user
+interface. I have also been designing controllers to send and receive data from
+the REST API\@. I have also setup and hosted the webapp in Ionic View for testing
+and displaying the design of the webapp in a mobile platform. The next steps are
+to continue working on and improving the design of the templates for the
+remaining pages of the webapp and integrating them with the REST API once it is
+ready.
+
+\bigskip
+\noindent{\Large \bf Harry's Progress}
+\smallskip
+
+\noindent
+These two weeks I worked on setting up data service for transporting user
+defined data across templates, also solved cache problem from routing side. Now
+the registration part of our app has completed functionality. All the data
+(program name, interests, preferences) could be stored across the live time of
+app. Once authentication finished we could test directly.
+
+\bigskip
+\noindent{\Large \bf Matt's Progress}
+\smallskip
+
+\noindent I have managed to combine Django’s User model with our custom
+UserProfile model, meaning that we have a fully functional user model for the
+server. Thanks to this, I was then able to set up an authentication scheme on
+the server for applications to connect and login. We’re using the OAuth2.0
+specification, which means that the web app will be registered as an application
+on the server before use. This means that any unauthorised applications cannot
+use our API\@. The next step is to set up user signup and profile editing,
+followed by mentorship endpoints.
+
+\bigskip
+\noindent{\Large \bf Plan For The Next Two Weeks}
+\smallskip
+
+\noindent Continue working on designing front-end templates which are to be
+integrated with REST calls to obtain user profile data.
+
+\hrule
+
+\subsection*{Keeping Up With The Project}
+
+To complement these biweekly reports, you can also view these pages:\\
+
+\noindent
+Project site: http://students.cs.ucl.ac.uk/2016/group19/\\
+
+\noindent
+Code repository: https://github.com/mbellgb/syseng19-code\\
+
+\noindent
+Documentation: https://github.com/mbellgb/syseng19-docs
+
+\end{document}
+% vim: textwidth=80

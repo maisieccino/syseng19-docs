@@ -1,0 +1,140 @@
+% arara: xelatex: { synctex: true, action: nonstopmode, options: "-halt-on-error" }
+% arara: clean: { files: [ 2017-03-24.aux, 2017-03-24.bbl, 2017-03-24.bcf, 2017-03-24.blg, 2017-03-24.log, 2017-03-24.out, 2017-03-24.run.xml ]}
+\documentclass[11pt]{report}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true}
+\pagenumbering{roman}
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0.0in
+\textwidth=6.5in
+\marginparwidth=0.5in
+\headheight=0pt
+\headsep=0pt
+\textheight=9.0in
+\begin{document}
+
+\centerline{{\LARGE \bf Atos Mentor Matching}}
+
+\centerline{\large \bf Biweekly Report 9, 24\textsuperscript{th} of March 2017}
+\centerline{Christopher Lau $\bullet$ Harry Chen $\bullet$ Matthew Bell }
+\noindent
+\line(1,0){470}\\
+
+
+\noindent {\Large \bf Overview}
+\smallskip
+
+\noindent
+Over the last two weeks, we have made significant progress on both the frontend
+and backend. The backend API has been updated to allow easier tag management, as
+well as operations for cohorts (create, read, update, destroy), and an endpoint
+that allows users to register for a programme’s cohort.
+
+The webapp now performs checks whether the currently logged in user is an admin.
+Admin features were also implemented for example creation of mentor programs and
+also cohort creation of each program. Admins are now able to manage their
+desired programs and cohorts by controlling the cohort size, and also start
+date,end date and match date of the cohort. In addition, users could now modify
+their profile, include uploading pictures and change their bio.
+
+\bigskip
+\noindent{\Large \bf Meetings To Date}
+\smallskip
+
+\noindent
+\begin{itemize}
+    \item \textbf{Team Meeting (2017/03/22)}: During this meeting, we worked on
+        fixing API integration issues, as well as receive feedback on our
+        website from Yun Fu.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Completed Tasks}
+\smallskip
+
+\noindent
+Since the previous report these are the tasks that have been completed to date:
+\begin{itemize}
+    \item Implemented the Cohort model and created the /cohort/ and
+        /cohort/{cohortId}/ API endpoints
+    \item Fixed some security issues, including object IDs being modifiable and
+        cohort objects not patching properly
+    \item Allow cohorts to be set with defaultCohortSize
+    \item Allow tags to be created and fetched using strings
+    \item Add /cohort/{cohortId}/register endpoint, allowing users to register
+        for a programme cohort.
+    \item Implemented user settings so that users can edit their profile.
+    \item Implemented program creation for admins.
+    \item Implemented program editing and cohort management for admins.
+    \item Implemented image uploading in the front end side.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Chris' Progerss}
+\smallskip
+
+\noindent
+ have been continuing my work on the user interface and design of the webapp.
+ For these two weeks, I have also implemented the user settings feature which
+ allows users to modify their profile. Besides that, I have also implemented the
+ checks for admin privileges, which means that admin privileges are granted only
+ if the user is logged in as an admin. I have also worked on the UI of the
+ cohort management page by listing out the cohort in a neat manner which is easy
+ to read and manage. Finally, I have also been working on documentation by
+ updating the project website.
+
+\bigskip
+\noindent{\Large \bf Harry's Progress}
+\smallskip
+
+\noindent
+Last two weeks I worked on implementing functionalities of front-end side. After
+Matt updated backend API, I achieved operations for cohorts and programs
+(creating, modify, delete by admin). And I also take a research of cordova
+camera API, achieve the image uploading function inside our app.
+
+\bigskip
+\noindent{\Large \bf Matt's Progress}
+\smallskip
+
+\noindent
+I have been working hard on the API, making sure that it has a good coverage of
+tests, making sure that features are implemented according to the API spec and
+web standards, as well as ensuring that the test server does not crash when
+updating. Cohort endpoints are now implemented, as well as the cohort
+registration endpoint, meaning that users can now enrol themselves on mentorship
+programmes.
+
+\bigskip
+\noindent{\Large \bf Plan For The Next Two Weeks}
+\smallskip
+
+\noindent
+\begin{itemize}
+    \item Implement /programme/{id}/cohorts/active endpoint, that returns the
+        current “active” cohort for a programme.
+    \item Implement basic matching algorithm, that is run on a cohort.
+    \item Implement match serializer and endpoint.
+    \item Design constraint system for matching and registering for programmes.
+    \item Work on cohort registration on client side
+\end{itemize}
+
+\hrule
+
+\subsection*{Keeping Up With The Project}
+
+To complement these biweekly reports, you can also view these pages:\\
+
+\noindent
+Project site: http://students.cs.ucl.ac.uk/2016/group19/\\
+
+\noindent
+Code repository: https://github.com/mbellgb/syseng19-code\\
+
+\noindent
+Documentation: https://github.com/mbellgb/syseng19-docs
+
+\end{document}
+% vim: textwidth=80

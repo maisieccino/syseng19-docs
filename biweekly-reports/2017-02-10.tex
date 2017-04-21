@@ -1,0 +1,152 @@
+% arara: xelatex: { synctex: true, action: nonstopmode, options: "-halt-on-error" }
+% arara: clean: { files: [ 2017-02-10.aux, 2017-02-10.bbl, 2017-02-10.bcf, 2017-02-10.blg, 2017-02-10.log, 2017-02-10.out, 2017-02-10.run.xml ]}
+\documentclass[11pt]{report}
+\usepackage{color}
+\usepackage{hyperref}
+\hypersetup{colorlinks = true}
+\pagenumbering{roman}
+\topmargin=0.0in
+\oddsidemargin=0.0in
+\evensidemargin=0.0in
+\textwidth=6.5in
+\marginparwidth=0.5in
+\headheight=0pt
+\headsep=0pt
+\textheight=9.0in
+\begin{document}
+
+\centerline{{\LARGE \bf Atos Mentor Matching}}
+
+\centerline{\large \bf Biweekly Report 6, 10\textsuperscript{th} of February 2017}
+\centerline{Christopher Lau $\bullet$ Harry Chen $\bullet$ Matthew Bell }
+\noindent
+\line(1,0){470}\\
+
+
+\noindent {\Large \bf Overview}
+\smallskip
+
+\noindent
+The primary focus of the past two weeks was to begin development of the API and
+webapp, as well as setting up development tools to aid integration and testing
+as development progresses. We also spent some time to touch base with our
+client.
+
+\bigskip
+\noindent{\Large \bf Meetings To Date}
+\smallskip
+
+\noindent
+\begin{itemize}
+    \item \textbf{Supervisor Meeting (2017/02/03)}: The meeting involved
+        updating our supervisor regarding the progress that we have made so far
+        in terms of development and receiving feedback on things we could
+        improve on. Our supervisor also gave us suggestions on how we could
+        prepare for our final presentation which was in early April. We agreed
+        that we could prepare short presentation slides prior to every
+        supervisor meeting illustrating our progress so that our supervisor
+        could give feedback that would contribute to our final presentation.
+    \item \textbf{Client Meeting (2017/02/08)}: This was a brief meeting to
+        update our client regarding our progress and also discuss about the
+        project website and prototype design. Overall, the client was satisfied
+        with the documentation that the project website contained and was happy
+        with our prototype design. Our client also mentioned that she will be
+        sending us the dates for which she will be in London so that we could
+        arrange a face to face meeting with her later towards the end of the
+        month.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Completed Tasks}
+\smallskip
+
+\noindent
+Since the previous report these are the tasks that have been completed to date:
+\begin{itemize}
+    \item Webapp routing added.
+    \item Research of token based authentication.
+    \item Front-end templates for the home page and user profile page which are to be integrated with user authentication when it is complete.
+    \item Set up test server. (https://api.dev.mbell.me)
+    \item First version of API documentation created.
+    \item Set up continuous integration and unit testing harness.
+    \item Server-side data models created and initial database migrations added.
+\end{itemize}
+
+\bigskip
+\noindent{\Large \bf Chris' Progerss}
+\smallskip
+
+\noindent
+For the past two weeks, I was working on creating templates and wireframes for
+the homepage and user profile page using ionic UI components and AngularJS\@.
+These templates will be integrated with the backend once the user authentication
+portion of REST API is complete. I was also working on improving the overall UI
+design of the web app such as cleaning up the appearance of the side menu and
+fixed some of the routing issues that the web app contained. Besides that, I
+continued to manage communication with the client by arranging meetings with her
+and keeping her up to date with our progress.
+
+\bigskip
+\noindent{\Large \bf Harry's Progress}
+\smallskip
+
+\noindent
+These two weeks I'm working on the user authentication. After talking with Matt
+we decided to use token instead of session and cookies. Then I took a research
+of the local storage in ionic app, import and use the module ngstorage. The
+controllers and services for authentication are almost done but there are still
+some problems need to be solved. By the way I solved all the routing inside the
+app, also set up the default page to login page.
+
+\bigskip
+\noindent{\Large \bf Matt's Progress}
+\smallskip
+
+\noindent
+These past two weeks, I have been incredibly busy completing some further devops
+tasks, as well as working on the API to set up our ``CRUD'' (Create, Read, Update,
+Destroy) and user authentication endpoints. Firstly, I have acquired a
+DigitalOcean VPS and configured it to run Django safely and securely. I then
+created a remote Git repository on the server as well as some Git-hooks which
+deploy any code pushed to that remote. Next, I set up HTTPS on the server using
+Let’s Encrypt, meaning that any traffic to/from the server is encrypted from
+third parties. I then created some basic unit tests for the code so far, added a
+config file, and set up Travis CI so that our code is staged, tested and then
+deployed to our test server automatically, thus enabling us to stick to the
+Agile methodology a lot closer than otherwise, as well as ensuring code is
+always well-tested. We’re using Test-Driven Development (TDD) for the server
+code, meaning that tests are written before we write the actual application
+code. Finally, in terms of the code itself, I have successfully transferred
+models from the UML diagrams made earlier into Django data models, and have
+successfully migrated these into staging databases both locally and on the test
+server. The next steps are to set up user authentication so that we can start
+integrating the web app with the API\@.
+
+\bigskip
+\noindent{\Large \bf Plan For The Next Two Weeks}
+\smallskip
+
+\noindent
+\begin{itemize}
+    \item Finish the user authentication in front-end side.
+    \item Continue working to improve the user interface design and integrate
+        the front-end with the backend REST API\@.
+\end{itemize}
+
+\hrule
+
+\subsection*{Keeping Up With The Project}
+
+To complement these biweekly reports, you can also view these pages:\\
+
+\noindent
+Project site: http://students.cs.ucl.ac.uk/2016/group19/\\
+
+\noindent
+Code repository: https://github.com/mbellgb/syseng19-code\\
+
+\noindent
+Documentation: https://github.com/mbellgb/syseng19-docs
+
+\end{document}
+% vim: textwidth=80
